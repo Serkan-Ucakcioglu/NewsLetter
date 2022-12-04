@@ -10,7 +10,7 @@ function Navbar() {
         News
       </Link>
       <Link to="/" className="underline text-xl font-bold">
-        se
+        Se
       </Link>
     </div>
   );
