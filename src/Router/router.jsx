@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import App from "../App";
 import Error from "../Components/Error";
-import Header from "../Components/Header";
+import Header from "../Components/Header/Header";
 
 export const router = createHashRouter(
   createRoutesFromElements(
