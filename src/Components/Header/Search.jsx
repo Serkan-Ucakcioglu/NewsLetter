@@ -6,7 +6,7 @@ function Search() {
       <input
         type="text"
         placeholder="Search News"
-        className="border relative border-r-0 border-2 h-12 rounded w-[600px] pl-10 outline-none shadow"
+        className="border relative border-2 h-12 rounded w-[600px] pl-10 outline-none shadow"
       />
       <img
         src={SearchSvg}
