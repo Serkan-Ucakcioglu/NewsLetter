@@ -1,13 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuerys = fetchBaseQuery({
-  baseUrl: import.meta.env.MY_API_URL,
-  credentials: "include",
+  baseUrl: import.meta.env.VITE_MY_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
   prepareHeaders: (headers) => {
-    const token = import.meta.env.MY_API_KEY;
+    const token = import.meta.env.VITE_MY_API_KEY;
     if (token) {
       headers.set("Authorization", `${token}`);
     }

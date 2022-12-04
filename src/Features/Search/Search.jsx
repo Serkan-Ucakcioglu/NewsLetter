@@ -2,11 +2,11 @@ import SearchSvg from "../../Svg/Search.svg";
 
 function Search() {
   return (
-    <div className="relative h-5 flex items-center">
+    <div className="relative w-[700px] h-5 flex items-center">
       <input
         type="text"
         placeholder="Search News"
-        className="border relative border-2 h-12 rounded w-[600px] pl-10 outline-none shadow"
+        className="border-gray-500 focus:border-black relative border-2 h-11 rounded w-full pl-10 outline-none shadow"
       />
       <img
         src={SearchSvg}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="ml-auto flex gap-5">
+    <div className="flex gap-5">
       <Link to="/" className="underline text-xl font-bold">
         About
       </Link>
