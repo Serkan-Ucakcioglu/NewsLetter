@@ -7,7 +7,7 @@ function Topics() {
   console.log(data);
   return (
     <div className="w-full flex justify-center mt-4">
-      <div className="flex flex-wrap max-w-4xl gap-5">
+      <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
         {data?.stories?.map((topic) => (
           <TopicList topic={topic} key={topic?.internalID} />
         ))}
