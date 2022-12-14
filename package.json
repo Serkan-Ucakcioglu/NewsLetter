@@ -2,6 +2,7 @@
   "name": "react",
   "private": true,
   "version": "0.0.0",
+  "proxy": "http://api.mediastack.com/v1/",
   "type": "module",
   "scripts": {
     "dev": "vite",

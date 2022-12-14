@@ -1,10 +1,10 @@
 import { apiSlice } from "../../Api/apiSlice";
+
 export const topicsApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getTopic: builder.query({
       query: () => ({
-        url: "top-headlines?country=us",
-        method: "GET",
+        url: "stories/list?template=CURRENCY&id=usdjpy",
       }),
       providesTags: ["newsLetter"],
     }),
