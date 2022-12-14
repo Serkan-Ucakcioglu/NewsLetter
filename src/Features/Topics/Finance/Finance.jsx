@@ -3,7 +3,7 @@ import TopicList from "./FinanceList";
 import { useGetTopicQuery } from "../topicsSlice";
 import Loader from "../../../Components/Loader";
 
-function Topics() {
+function Finance() {
   const { data, isLoading } = useGetTopicQuery();
   console.log(data);
 
@@ -24,4 +24,4 @@ function Topics() {
   );
 }
 
-export default Topics;
+export default Finance;

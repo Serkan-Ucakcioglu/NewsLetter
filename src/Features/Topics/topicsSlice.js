@@ -12,6 +12,8 @@ export const topicsApi = apiSlice.injectEndpoints({
       query: () => ({
         url: "news/list?id=market",
       }),
+      transformResponse: (response) =>
+        response.modules.filter((mod) => mod.stories.length > 0),
       providesTags: ["newsLetter"],
     }),
   }),

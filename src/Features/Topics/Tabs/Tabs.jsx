@@ -1,16 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import Market from "../Markets/Market";
+import News from "../News/News";
 import Finance from "../Finance/Finance";
 import TabList from "./TabList";
 
 function Tabs() {
-  const arr = [{ name: "Finance" }, { name: "Markets" }, { name: "News" }];
+  const arr = [{ name: "Finance" }, { name: "News" }, { name: "Markets" }];
   const [active, setActive] = useState("Finance");
 
   const tabArr = {
     Finance: <Finance />,
-    Markets: <Market />,
+    News: <News />,
   };
   return (
     <>
