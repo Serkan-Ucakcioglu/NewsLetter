@@ -1,6 +1,6 @@
 import React from "react";
-import TopicList from "./TopicList";
-import { useGetTopicQuery } from "./topicsSlice";
+import TopicList from "./FinanceList";
+import { useGetTopicQuery } from "../topicsSlice";
 
 function Topics() {
   const { data } = useGetTopicQuery();
