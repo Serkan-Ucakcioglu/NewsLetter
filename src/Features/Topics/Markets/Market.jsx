@@ -1,7 +1,7 @@
 import React from "react";
 
-function List() {
+function Market() {
   return <div>List</div>;
 }
 
-export default List;
+export default Market;

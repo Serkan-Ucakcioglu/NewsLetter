@@ -8,6 +8,12 @@ export const topicsApi = apiSlice.injectEndpoints({
       }),
       providesTags: ["newsLetter"],
     }),
+    getMarkets: builder.query({
+      query: () => ({
+        url: "news/list?id=market",
+      }),
+      providesTags: ["newsLetter"],
+    }),
   }),
 });
 
