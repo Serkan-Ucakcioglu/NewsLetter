@@ -17,4 +17,4 @@ export const topicsApi = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetTopicQuery } = topicsApi;
+export const { useGetTopicQuery, useGetMarketsQuery } = topicsApi;
