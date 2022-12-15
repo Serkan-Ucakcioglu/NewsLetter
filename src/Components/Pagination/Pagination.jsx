@@ -1,18 +1,13 @@
+import usePagi from "../../Hooks/usePagi";
 import { usePagination, DOTS } from "../../Hooks/usePagination";
 const Pagination = (props) => {
-  const {
-    onPageChange,
-    totalCount,
-    siblingCount = 1,
-    currentPage,
-    pageSize,
-  } = props;
-
+  const { onPageChange, totalCount, siblingCount = 1, currentPage } = props;
+  const { PageSize } = usePagi();
   const paginationRange = usePagination({
     currentPage,
     totalCount,
     siblingCount,
-    pageSize,
+    PageSize,
   });
 
   const content = paginationRange?.map((pageNumber) => {
@@ -22,8 +17,8 @@ const Pagination = (props) => {
 
     return (
       <li
-        className={`flex items-center border-black border-2 bg-white text-black cursor-pointer rounded px-3
-         pagenumber ${pageNumber === currentPage && "active"}`}
+        className={`flex items-center border-gray-400 border bg-white text-black cursor-pointer rounded px-3 ml-2
+         pagenumber ${pageNumber === currentPage && "active border-white"}`}
         onClick={() => onPageChange(pageNumber)}
       >
         {pageNumber}
@@ -31,12 +26,12 @@ const Pagination = (props) => {
     );
   });
 
-  const max = Math.ceil(totalCount / pageSize); // max page
+  const max = Math.ceil(totalCount / PageSize); // max page
   if (currentPage === 0 || paginationRange.length < 2) return null;
   return (
     <ul className="flex gap-3 justify-center mt-8 mb-10">
       <li
-        className="border-black border-2 bg-white text-black cursor-pointer rounded p-1"
+        className="border-gray-400 border bg-white text-black cursor-pointer rounded p-1"
         onClick={() => {
           if (currentPage > 1) {
             onPageChange(currentPage - 1);
@@ -47,7 +42,7 @@ const Pagination = (props) => {
       </li>
       {content}
       <li
-        className="border-black border-2 bg-white text-black cursor-pointer rounded p-1"
+        className="border-gray-400 border ml-2 bg-white text-black cursor-pointer rounded p-1"
         onClick={() => {
           if (currentPage < max) {
             onPageChange(currentPage + 1);

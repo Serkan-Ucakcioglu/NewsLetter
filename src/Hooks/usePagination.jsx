@@ -9,12 +9,12 @@ const range = (start, end) => {
 
 export function usePagination({
   totalCount, //total
-  pageSize, // bir sayfadaki liste
+  PageSize, // bir sayfadaki liste
   siblingCount = 1, // kardeş sayısı
   currentPage, // mevcut sayfa
 }) {
   const paginationRange = useMemo(() => {
-    const totalPageCount = Math.ceil(totalCount / pageSize); //total page
+    const totalPageCount = Math.ceil(totalCount / PageSize); //total page
 
     const totalPageNumbers = siblingCount + 2;
 
@@ -60,7 +60,7 @@ export function usePagination({
         return [...middleRange, DOTS];
       }
     }
-  }, [totalCount, pageSize, siblingCount, currentPage]);
+  }, [totalCount, PageSize, siblingCount, currentPage]);
 
   return paginationRange;
 }

@@ -1,4 +1,5 @@
 .active {
-  background: black !important;
-  color: white !important;
+  background: #3e64ff !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
 }

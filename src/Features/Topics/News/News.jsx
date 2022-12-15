@@ -1,22 +1,15 @@
-import { useMemo } from "react";
-import { useState } from "react";
 import Loader from "../../../Components/Loader";
 import FinanceList from "../Finance/FinanceList";
 import { useGetMarketsQuery } from "../topicsSlice";
 import Pagination from "../../../Components/Pagination/Pagination";
+import usePagi from "../../../Hooks/usePagi";
 
-let PageSize = 5;
 function News() {
   const { data, isFetching } = useGetMarketsQuery();
-
-  const [currentPage, setCurrentPage] = useState(1);
   const datas = data?.map((obj) => obj?.stories).flat(); //get stories array
-
-  const currentSearchData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
-    return datas?.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage, data]);
+  const { currentSearchData, currentPage, setCurrentPage } = usePagi(
+    datas && datas
+  );
 
   if (isFetching)
     return (
@@ -34,8 +27,7 @@ function News() {
       </div>
       <Pagination
         currentPage={currentPage}
-        totalCount={datas.length}
-        pageSize={PageSize}
+        totalCount={datas?.length}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </div>
