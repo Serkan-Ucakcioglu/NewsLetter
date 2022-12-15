@@ -17,8 +17,8 @@ function News() {
   return (
     <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
       {data &&
-        datas?.map((topic) => {
-          return <FinanceList topic={topic} key={topic?.id} />;
+        datas?.map((topic, i) => {
+          return <FinanceList topic={topic} key={i} />;
         })}
     </div>
   );

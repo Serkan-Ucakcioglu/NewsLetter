@@ -13,7 +13,7 @@ export const topicsApi = apiSlice.injectEndpoints({
         url: "news/list?id=market",
       }),
       transformResponse: (response) =>
-        response.modules.filter((mod) => mod.stories.length > 0),
+        response.modules.filter((obj) => obj.id === "pagination_story_list"),
       providesTags: ["newsLetter"],
     }),
   }),
