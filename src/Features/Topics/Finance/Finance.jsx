@@ -5,8 +5,6 @@ import Loader from "../../../Components/Loader";
 
 function Finance() {
   const { data, isLoading } = useGetTopicQuery();
-  console.log(data);
-
   if (isLoading)
     return (
       <div className="flex justify-center items-center mt-6">
