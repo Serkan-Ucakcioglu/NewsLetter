@@ -5,7 +5,7 @@ function FinanceList({ topic }) {
     <div className="flex flex-col  items-center mb-2 mt-8">
       <article className="w-[350px] bg-white border h-[380px] border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <img
-          className="rounded-t-lg h-[234px]"
+          className="rounded-t-lg w-full h-[234px]"
           src={
             topic?.image ||
             topic?.thumbnailImage ||
