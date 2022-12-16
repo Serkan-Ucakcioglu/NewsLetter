@@ -9,7 +9,6 @@ function News() {
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     data && data
   );
-  console.log(data);
 
   if (isFetching) return <Loader />;
   return (
