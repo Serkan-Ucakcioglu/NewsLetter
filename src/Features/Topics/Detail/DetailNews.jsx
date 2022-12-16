@@ -23,6 +23,7 @@ function DetailNews() {
       </span>
     );
   });
+
   if (isFetching)
     return (
       <div className="flex justify-center items-center mt-6">
@@ -40,6 +41,7 @@ function DetailNews() {
         <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-gray-400">
           {topic?.title}.
         </p>
+
         {abstract}
         <div className="flex flex-wrap">{brands}</div>
       </div>
