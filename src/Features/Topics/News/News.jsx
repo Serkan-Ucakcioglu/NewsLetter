@@ -6,7 +6,7 @@ import usePagi from "../../../Hooks/usePagi";
 
 function News() {
   const { data, isFetching } = useGetNewsQuery();
-  const datas = data?.map((obj) => obj?.stories).flat(); //get stories array
+  const datas = data?.map((obj) => obj?.stories).flat(); //get stories arrays
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     datas && datas
   );
