@@ -8,6 +8,21 @@ function DetailNews() {
   const { id } = useParams();
   const { data: topic, isFetching } = useGetDetailsQuery(id);
 
+  const brands = topic?.secondaryBrands?.map((brand) => {
+    return (
+      <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2">
+        #{brand}
+      </span>
+    );
+  });
+
+  const abstract = topic?.abstract?.map((title) => {
+    return (
+      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-gray-400">
+        {title}.
+      </span>
+    );
+  });
   if (isFetching)
     return (
       <div className="flex justify-center items-center mt-6">
@@ -25,22 +40,8 @@ function DetailNews() {
         <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-gray-400">
           {topic?.title}.
         </p>
-        {topic?.abstract?.map((title) => {
-          return (
-            <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-gray-400">
-              {title}.
-            </span>
-          );
-        })}
-        <div className="flex flex-wrap">
-          {topic?.secondaryBrands?.map((brand) => {
-            return (
-              <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2">
-                #{brand}
-              </span>
-            );
-          })}
-        </div>
+        {abstract}
+        <div className="flex flex-wrap">{brands}</div>
       </div>
       <Image topic={topic} />
     </div>
