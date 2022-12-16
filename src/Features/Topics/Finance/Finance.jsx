@@ -7,9 +7,8 @@ import Pagination from "../../../Components/Pagination/Pagination";
 
 function Finance() {
   const { data, isFetching } = useGetTopicQuery();
-  const datas = data?.stories.map((news) => news).flat();
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
-    datas && datas
+    data && data
   );
 
   if (isFetching) return <Loader />;
@@ -26,7 +25,7 @@ function Finance() {
       </div>
       <Pagination
         currentPage={currentPage}
-        totalCount={datas && datas?.length}
+        totalCount={data && data?.length}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </>

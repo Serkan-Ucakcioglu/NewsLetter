@@ -8,11 +8,11 @@ function FinanceList({ topic }) {
     <div className="flex flex-col  items-center mb-2 mt-8">
       <article
         className={`w-[350px]  bg-white border   border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ${
-          topic.id ? "h-[500px]" : "h-[420px]"
+          topic.id ? "h-[520px]" : "h-[420px]"
         }`}
       >
         <img
-          className="rounded-t-lg w-full h-[234px]"
+          className="rounded-t-lg w-full h-[240px]"
           src={
             topic?.image ||
             topic?.thumbnailImage ||
@@ -21,10 +21,10 @@ function FinanceList({ topic }) {
           loading="lazy"
           alt="image"
         />
-        <div className="flex flex-1  flex-col p-5">
+        <div className="flex flex-1  flex-col p-4">
           <div
             className={`flex flex-col justify-center ${
-              topic.id && "h-[110px]"
+              topic.id && "h-[100px]"
             }`}
           >
             <h5 className="mb-2 text-m font-bold text-gray-900 dark:text-white">

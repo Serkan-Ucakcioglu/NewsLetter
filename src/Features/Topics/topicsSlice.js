@@ -6,6 +6,8 @@ export const topicsApi = apiSlice.injectEndpoints({
       query: () => ({
         url: "stories/list?template=CURRENCY&id=usdjpy",
       }),
+      transformResponse: (response) =>
+        response?.stories.map((news) => news).flat(),
       providesTags: ["newsLetter"],
     }),
     getNews: builder.query({
