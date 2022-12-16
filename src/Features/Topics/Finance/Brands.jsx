@@ -38,7 +38,7 @@ function Brands({ topic }) {
       <div className="flex justify-start items-center h-full mt-2">
         {primary}
       </div>
-      <div className="flex flex-wrap mt-3 h-full items-end">{brands}</div>
+      <div className="flex flex-wrap mt-2 h-full items-end">{brands}</div>
     </>
   );
 }
