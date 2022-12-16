@@ -22,7 +22,7 @@ function Finance() {
     <>
       <div className="w-full flex justify-center mt-4">
         <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
-          {currentSearchData.map((topic) => (
+          {currentSearchData?.map((topic) => (
             <TopicList topic={topic} key={topic?.internalID} />
           ))}
         </div>
