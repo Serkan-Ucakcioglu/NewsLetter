@@ -5,7 +5,7 @@ function Logo() {
   return (
     <Link to="/">
       <img
-        src="https://pbs.twimg.com/profile_images/1108430392267280389/ufmFwzIn_400x400.png"
+        src="https://cdn-icons-png.flaticon.com/512/21/21601.png"
         alt="logo"
         className="rounded"
         loading="lazy"
