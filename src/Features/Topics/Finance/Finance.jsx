@@ -6,13 +6,13 @@ import usePagi from "../../../Hooks/usePagi";
 import Pagination from "../../../Components/Pagination/Pagination";
 
 function Finance() {
-  const { data, isLoading } = useGetTopicQuery();
+  const { data, isFetching } = useGetTopicQuery();
   const datas = data?.stories.map((news) => news).flat();
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     datas && datas
   );
 
-  if (isLoading) return <Loader />;
+  if (isFetching) return <Loader />;
 
   return (
     <>

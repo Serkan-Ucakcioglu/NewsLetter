@@ -12,7 +12,7 @@ function Region() {
     datas && datas
   );
 
-  if (isLoading) return <Loader />;
+  if (isFetching) return <Loader />;
   return (
     <div className="flex flex-col">
       <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">

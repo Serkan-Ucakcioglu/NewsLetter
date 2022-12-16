@@ -24,7 +24,7 @@ function DetailNews() {
     );
   });
 
-  if (isLoading) return <Loader />;
+  if (isFetching) return <Loader />;
   return (
     <div className="flex flex-col sm:flex-row p-10 mt-8 bg-gray-100">
       <div className="flex mb-5 flex-1 flex-col text-justify justify-center items-center">
