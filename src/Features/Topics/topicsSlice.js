@@ -8,7 +8,7 @@ export const topicsApi = apiSlice.injectEndpoints({
       }),
       providesTags: ["newsLetter"],
     }),
-    getMarkets: builder.query({
+    getNews: builder.query({
       query: () => ({
         url: "news/list?id=market",
       }),
@@ -16,7 +16,14 @@ export const topicsApi = apiSlice.injectEndpoints({
         response.modules.filter((obj) => obj.id === "pagination_story_list"),
       providesTags: ["newsLetter"],
     }),
+    getRegion: builder.query({
+      query: () => ({
+        url: "news/list-by-region?id=asya",
+      }),
+      providesTags: ["newsLetter"],
+    }),
   }),
 });
 
-export const { useGetTopicQuery, useGetMarketsQuery } = topicsApi;
+export const { useGetTopicQuery, useGetNewsQuery, useGetRegionQuery } =
+  topicsApi;

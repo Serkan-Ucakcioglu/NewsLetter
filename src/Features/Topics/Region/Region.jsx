@@ -1,16 +1,19 @@
+import React from "react";
 import Loader from "../../../Components/Loader";
-import FinanceList from "../Finance/FinanceList";
-import { useGetNewsQuery } from "../topicsSlice";
 import Pagination from "../../../Components/Pagination/Pagination";
 import usePagi from "../../../Hooks/usePagi";
+import FinanceList from "../Finance/FinanceList";
+import { useGetRegionQuery } from "../topicsSlice";
 
-function News() {
-  const { data, isFetching } = useGetNewsQuery();
-  const datas = data?.map((obj) => obj?.stories).flat(); //get stories array
+function Region() {
+  const { data, isFetching } = useGetRegionQuery();
+  const datas = data && data?.modules?.map((obj) => obj.stories).flat();
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     datas && datas
   );
+  console.log(datas);
 
+  console.log(data);
   if (isFetching)
     return (
       <div className="flex justify-center items-center mt-6">
@@ -34,4 +37,4 @@ function News() {
   );
 }
 
-export default News;
+export default Region;

@@ -3,14 +3,16 @@ import { useState } from "react";
 import News from "../News/News";
 import Finance from "../Finance/Finance";
 import TabList from "./TabList";
+import Region from "../Region/Region";
 
 function Tabs() {
-  const arr = [{ name: "Finance" }, { name: "News" }, { name: "Markets" }];
+  const arr = [{ name: "Finance" }, { name: "News" }, { name: "General" }];
   const [active, setActive] = useState("Finance");
 
   const tabArr = {
     Finance: <Finance />,
     News: <News />,
+    General: <Region />,
   };
   return (
     <>
