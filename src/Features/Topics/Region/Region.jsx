@@ -28,7 +28,7 @@ function Region() {
       </div>
       <Pagination
         currentPage={currentPage}
-        totalCount={datas?.length}
+        totalCount={datas && datas?.length}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </div>
