@@ -11,9 +11,7 @@ function Region() {
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     datas && datas
   );
-  console.log(datas);
 
-  console.log(data);
   if (isFetching)
     return (
       <div className="flex justify-center items-center mt-6">

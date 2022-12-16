@@ -34,15 +34,6 @@ export function usePagination({
     const firstPageIndex = 1;
     const lastPageIndex = totalPageCount;
 
-    // sol
-    if (!leftDots && rightDots) {
-      let leftItemCount = 3 + 2 * siblingCount;
-      let leftRange = range(1, leftItemCount);
-
-      return [...leftRange, DOTS, totalPageCount];
-    }
-
-    //sağ
     if (leftDots && !rightDots) {
       let rightItemCount = 1 + 2 * siblingCount;
       let rightRange = range(
