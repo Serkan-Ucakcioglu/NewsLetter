@@ -53,7 +53,11 @@ function FinanceList({ topic }) {
         />
 
         <div className="flex flex-1  flex-col p-5">
-          <div className="flex flex-col justify-center h-[110px]">
+          <div
+            className={`flex flex-col justify-center ${
+              topic.id && "h-[110px]"
+            }`}
+          >
             <h5 className="mb-2 text-m font-bold text-gray-900 dark:text-white">
               {topic?.byline}
             </h5>
