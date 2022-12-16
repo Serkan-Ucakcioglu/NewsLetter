@@ -13,13 +13,18 @@ export const topicsApi = apiSlice.injectEndpoints({
         url: "news/list?id=market",
       }),
       transformResponse: (response) =>
-        response.modules.filter((obj) => obj.id === "pagination_story_list"),
+        response.modules
+          .filter((obj) => obj.id === "pagination_story_list")
+          .map((obj) => obj?.stories)
+          .flat(),
       providesTags: ["newsLetter"],
     }),
     getRegion: builder.query({
       query: () => ({
         url: "news/list-by-region?id=asya",
       }),
+      transformResponse: (response) =>
+        response?.modules?.map((obj) => obj.stories).flat(),
       providesTags: ["newsLetter"],
     }),
     getDetails: builder.query({

@@ -6,10 +6,10 @@ import usePagi from "../../../Hooks/usePagi";
 
 function News() {
   const { data, isFetching } = useGetNewsQuery();
-  const datas = data?.map((obj) => obj?.stories).flat(); //get stories arrays
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
-    datas && datas
+    data && data
   );
+  console.log(data);
 
   if (isFetching) return <Loader />;
   return (
@@ -22,7 +22,7 @@ function News() {
       </div>
       <Pagination
         currentPage={currentPage}
-        totalCount={datas && datas?.length}
+        totalCount={data && data?.length}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </div>

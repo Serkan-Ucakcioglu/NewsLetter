@@ -7,9 +7,8 @@ import { useGetRegionQuery } from "../topicsSlice";
 
 function Region() {
   const { data, isFetching } = useGetRegionQuery();
-  const datas = data && data?.modules?.map((obj) => obj.stories).flat();
   const { currentSearchData, currentPage, setCurrentPage } = usePagi(
-    datas && datas
+    data && data
   );
 
   if (isFetching) return <Loader />;
@@ -23,7 +22,7 @@ function Region() {
       </div>
       <Pagination
         currentPage={currentPage}
-        totalCount={datas && datas?.length}
+        totalCount={data && data?.length}
         onPageChange={(page) => setCurrentPage(page)}
       />
     </div>

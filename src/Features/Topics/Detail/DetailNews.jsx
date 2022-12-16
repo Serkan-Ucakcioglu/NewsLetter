@@ -31,11 +31,9 @@ function DetailNews() {
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           {topic?.byline}
         </h5>
-
         <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-gray-400">
           {topic?.title}.
         </p>
-
         {abstract}
         <div className="flex flex-wrap">{brands}</div>
       </div>
