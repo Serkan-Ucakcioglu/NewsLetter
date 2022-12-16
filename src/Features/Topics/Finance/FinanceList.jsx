@@ -20,7 +20,6 @@ function FinanceList({ topic }) {
           loading="lazy"
           alt="image"
         />
-
         <div className="flex flex-1  flex-col p-5">
           <div
             className={`flex flex-col justify-center ${

@@ -8,16 +8,12 @@ import Pagination from "../../../Components/Pagination/Pagination";
 function Finance() {
   const { data, isLoading } = useGetTopicQuery();
   const datas = data?.stories.map((news) => news).flat();
-  const { currentSearchData, currentPage, setCurrentPage, PageSize } = usePagi(
+  const { currentSearchData, currentPage, setCurrentPage } = usePagi(
     datas && datas
   );
 
-  if (isLoading)
-    return (
-      <div className="flex justify-center items-center mt-6">
-        <Loader />
-      </div>
-    );
+  if (isLoading) return <Loader />;
+
   return (
     <>
       <div className="w-full flex justify-center mt-4">
