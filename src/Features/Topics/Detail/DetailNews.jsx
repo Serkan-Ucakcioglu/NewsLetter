@@ -1,17 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../../Components/Loader";
-import { useGetDetailsQuery } from "./topicsSlice";
+import Loader from "../../../Components/Loader";
+import { useGetDetailsQuery } from "../topicsSlice";
+import Image from "./Image";
 
 function DetailNews() {
   const { id } = useParams();
   const { data: topic, isFetching } = useGetDetailsQuery(id);
-
-  const image = topic?.themedImages?.map((news) =>
-    news?.themes?.map((url) => {
-      return url?.imageURLs?.default;
-    })
-  );
 
   if (isFetching)
     return (
@@ -21,8 +16,8 @@ function DetailNews() {
     );
 
   return (
-    <div className="flex px-10 mt-8 bg-gray-100">
-      <div className="flex flex-1 flex-col text-justify justify-center items-center">
+    <div className="flex flex-col sm:flex-row p-10 mt-8 bg-gray-100">
+      <div className="flex mb-5 flex-1 flex-col text-justify justify-center items-center">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           {topic?.byline}
         </h5>
@@ -37,7 +32,6 @@ function DetailNews() {
             </span>
           );
         })}
-
         <div className="flex flex-wrap">
           {topic?.secondaryBrands?.map((brand) => {
             return (
@@ -48,16 +42,7 @@ function DetailNews() {
           })}
         </div>
       </div>
-      <div className="flex justify-end items-center">
-        <img
-          src={
-            (image && image[0]) ||
-            "https://imgeng.jagran.com/images/2022/aug/breaking-news-21661219975178.jpg"
-          }
-          className="w-[700px] h-[400px] p-5"
-          alt="images"
-        />
-      </div>
+      <Image topic={topic} />
     </div>
   );
 }

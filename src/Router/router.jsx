@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import App from "../App";
 import Error from "../Components/Error";
-import DetailNews from "../Features/Topics/DetailNews";
+import DetailNews from "../Features/Topics/Detail/DetailNews";
 import Tabs from "../Features/Topics/Tabs/Tabs";
 
 export const router = createHashRouter(
