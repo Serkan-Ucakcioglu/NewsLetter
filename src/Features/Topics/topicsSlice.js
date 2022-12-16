@@ -22,8 +22,18 @@ export const topicsApi = apiSlice.injectEndpoints({
       }),
       providesTags: ["newsLetter"],
     }),
+    getDetails: builder.query({
+      query: (id) => ({
+        url: `stories/detail?internalID=${id}`,
+      }),
+      providesTags: ["newsLetter"],
+    }),
   }),
 });
 
-export const { useGetTopicQuery, useGetNewsQuery, useGetRegionQuery } =
-  topicsApi;
+export const {
+  useGetTopicQuery,
+  useGetNewsQuery,
+  useGetRegionQuery,
+  useGetDetailsQuery,
+} = topicsApi;
