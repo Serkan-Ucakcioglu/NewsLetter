@@ -6,6 +6,8 @@ export const searchApi = apiSlice.injectEndpoints({
       query: (searchText) => ({
         url: `market/auto-complete?query=${searchText}`,
       }),
+      transformResponse: (response) =>
+        response?.news?.map((news) => news).flat(),
       invalidatesTags: ["newsLetter"],
     }),
   }),
