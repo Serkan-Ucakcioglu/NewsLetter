@@ -3,11 +3,13 @@ import useDebounce from "../../Hooks/useDebounce";
 import { useGetSearchsQuery } from "./searchSlice";
 import SearchPopup from "./SearchPopup";
 import useSearch from "../../Hooks/useSearch";
+import { useLocation } from "react-router-dom";
 
 function Search() {
   const { value, handleChange } = useSearch();
   const debounce = useDebounce(value?.length > 2 && value);
   const { data } = useGetSearchsQuery(debounce && debounce);
+  const location = useLocation();
 
   return (
     <div className="relative w-[700px] h-5 flex items-center">
