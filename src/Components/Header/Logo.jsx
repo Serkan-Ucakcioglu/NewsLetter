@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 
 function Logo() {
   return (
-    <Link to="/">
+    <Link to="/" className="mr-10">
       <img
         src="https://cdn-icons-png.flaticon.com/512/21/21601.png"
         alt="logo"
-        className="rounded"
+        className="rounded w-[100px] h-10 sm:w-10 sm:h-10"
         loading="lazy"
-        width={50}
-        height={100}
       />
     </Link>
   );
