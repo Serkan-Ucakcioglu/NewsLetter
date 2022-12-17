@@ -3,13 +3,14 @@ import React from "react";
 function Primary() {
   return (
     <svg
-      className="bg-white color-white  mr-2"
+      className="mr-2"
       version="1.1"
       id="Capa_1"
       x="0px"
       y="0px"
       width="12"
       height="12"
+      fill="rgb(148 163 184)"
       viewBox="0 0 97.16 97.16"
     >
       <path d="M48.58,0C21.793,0,0,21.793,0,48.58s21.793,48.58,48.58,48.58s48.58-21.793,48.58-48.58S75.367,0,48.58,0z M48.58,86.823    c-21.087,0-38.244-17.155-38.244-38.243S27.493,10.337,48.58,10.337S86.824,27.492,86.824,48.58S69.667,86.823,48.58,86.823z" />

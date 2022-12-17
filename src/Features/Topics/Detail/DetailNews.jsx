@@ -26,7 +26,7 @@ function DetailNews() {
 
   if (isFetching) return <Loader />;
   return (
-    <div className="flex flex-col justify-center h-full dark:border-t dark:border-white sm:flex-row justify-center items-start h-screen p-10 bg-gray-100 dark:bg-gray-800">
+    <div className="flex flex-col justify-start m:flex-col h-full dark:border-t dark:border-white sm:flex-row justify-center items-start h-screen p-10 bg-gray-100 dark:bg-gray-800">
       <div className="flex  sm:mt-8 sm:flex-1 flex-col text-left items-center">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           {topic?.byline}
