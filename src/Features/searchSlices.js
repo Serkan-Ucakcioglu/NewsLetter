@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  debounce: "",
+  debounce: JSON.parse(sessionStorage.getItem("search")) || "",
 };
 
 const searchSlices = createSlice({
@@ -10,6 +10,7 @@ const searchSlices = createSlice({
   reducers: {
     addDebounce: (state, { payload }) => {
       state.debounce = payload;
+      sessionStorage.setItem("search", JSON.stringify(payload));
     },
   },
 });

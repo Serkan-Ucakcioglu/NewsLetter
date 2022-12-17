@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 function Search() {
   const { value, handleChange } = useSearch();
   const debounce = useDebounce(value?.length > 2 && value);
-  const { data } = useGetSearchsQuery(debounce && debounce);
+  const { data } = useGetSearchsQuery(debounce !== undefined && debounce);
   const location = useLocation();
 
   return (

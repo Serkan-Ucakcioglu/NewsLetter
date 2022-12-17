@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import { useGetSearchsQuery } from "./searchSlice";
-import useDebounce from "../../Hooks/useDebounce";
 import Loader from "../../Components/Loader";
 import Error from "../../Components/Error";
+import { useSelector } from "react-redux";
+import { selectedDebounce } from "../searchSlices";
 
 function SearchList() {
-  const debounce = useDebounce();
+  const debounce = useSelector(selectedDebounce);
   const { data, isError, isFetching } = useGetSearchsQuery(
-    debounce && debounce
+    debounce !== undefined && debounce
   );
+  console.log(debounce, "debounce");
+
+  console.log(data);
 
   if (isFetching) return <Loader />;
   if (isError) return <Error />;
