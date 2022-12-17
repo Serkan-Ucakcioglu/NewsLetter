@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 
-function usePagi(datas) {
+function usePagiFunction(datas) {
   let PageSize = 5;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -13,4 +13,4 @@ function usePagi(datas) {
   return { currentSearchData, setCurrentPage, PageSize, currentPage };
 }
 
-export default usePagi;
+export default usePagiFunction;

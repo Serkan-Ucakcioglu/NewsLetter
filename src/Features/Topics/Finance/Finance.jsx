@@ -2,12 +2,12 @@ import React from "react";
 import TopicList from "./FinanceList";
 import { useGetTopicQuery } from "../topicsSlice";
 import Loader from "../../../Components/Loader";
-import usePagi from "../../../Hooks/usePagi";
+import usePagiFunction from "../../../Hooks/usePagiFunction";
 import Pagination from "../../../Components/Pagination/Pagination";
 
 function Finance() {
   const { data, isFetching } = useGetTopicQuery();
-  const { currentSearchData, currentPage, setCurrentPage } = usePagi(
+  const { currentSearchData, currentPage, setCurrentPage } = usePagiFunction(
     data && data
   );
 

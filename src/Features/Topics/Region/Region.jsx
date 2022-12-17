@@ -1,13 +1,13 @@
 import React from "react";
 import Loader from "../../../Components/Loader";
 import Pagination from "../../../Components/Pagination/Pagination";
-import usePagi from "../../../Hooks/usePagi";
+import usePagiFunction from "../../../Hooks/usePagiFunction";
 import FinanceList from "../Finance/FinanceList";
 import { useGetRegionQuery } from "../topicsSlice";
 
 function Region() {
   const { data, isFetching } = useGetRegionQuery();
-  const { currentSearchData, currentPage, setCurrentPage } = usePagi(
+  const { currentSearchData, currentPage, setCurrentPage } = usePagiFunction(
     data && data
   );
 

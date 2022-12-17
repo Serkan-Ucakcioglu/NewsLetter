@@ -2,11 +2,11 @@ import Loader from "../../../Components/Loader";
 import FinanceList from "../Finance/FinanceList";
 import { useGetNewsQuery } from "../topicsSlice";
 import Pagination from "../../../Components/Pagination/Pagination";
-import usePagi from "../../../Hooks/usePagi";
+import usePagiFunction from "../../../Hooks/usePagiFunction";
 
 function News() {
   const { data, isFetching } = useGetNewsQuery();
-  const { currentSearchData, currentPage, setCurrentPage } = usePagi(
+  const { currentSearchData, currentPage, setCurrentPage } = usePagiFunction(
     data && data
   );
 
