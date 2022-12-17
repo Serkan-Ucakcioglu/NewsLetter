@@ -1,12 +1,17 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useGetSearchsQuery } from "./searchSlice";
-import useSearch from "../../Hooks/useSearch";
 import useDebounce from "../../Hooks/useDebounce";
+import Loader from "../../Components/Loader";
+import Error from "../../Components/Error";
 
 function SearchList() {
   const debounce = useDebounce();
-  const { data, error, isLoading } = useGetSearchsQuery(debounce && debounce);
+  const { data, isError, isFetching } = useGetSearchsQuery(
+    debounce && debounce
+  );
+
+  if (isFetching) return <Loader />;
+  if (isError) return <Error />;
 
   return (
     <div className="w-full flex justify-center mt-4">
