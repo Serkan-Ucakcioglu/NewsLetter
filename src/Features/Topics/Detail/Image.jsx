@@ -2,7 +2,7 @@ import React from "react";
 
 function Image({ topic }) {
   return (
-    <div className="flex  flex-col sm:flex-row justify-end items-center">
+    <div className="flex flex-col justify-center sm:flex-row  justify-start items-start">
       {topic.themedImages?.length ? (
         topic?.themedImages?.slice(0, 2)?.map((news) =>
           news?.themes?.map((url) => {

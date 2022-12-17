@@ -8,7 +8,9 @@ import { useLocation } from "react-router-dom";
 function Search() {
   const { value, handleChange } = useSearch();
   const debounce = useDebounce(value?.length > 2 && value);
-  const { data } = useGetSearchsQuery(debounce !== undefined && debounce);
+  const { data } = useGetSearchsQuery(
+    debounce !== undefined && debounce !== "" && debounce
+  );
   const location = useLocation();
 
   return (
@@ -17,7 +19,7 @@ function Search() {
         type="text"
         {...handleChange}
         placeholder="Search News"
-        className="border-gray-500 focus:border-black relative border-2 h-11 rounded w-full pl-10 outline-none shadow"
+        className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
       />
       {debounce && location?.pathname !== "/search-list" && (
         <SearchPopup data={data} />

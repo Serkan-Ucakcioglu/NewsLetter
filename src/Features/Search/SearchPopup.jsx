@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function SearchPopup({ data }) {
   return (
-    <div className="absolute bottom-0 top-10 p-3 h-[170px] border-white bg-gray-50 border w-full rounded">
+    <div className="absolute bottom-0 top-10 p-3 h-[170px] border-white bg-gray-50 dark:bg-white border w-full rounded">
       <div className="flex flex-col px-3">
         {data?.news?.slice(0, 3)?.map((obj) => {
           return (

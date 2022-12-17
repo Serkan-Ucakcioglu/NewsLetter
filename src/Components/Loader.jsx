@@ -2,7 +2,7 @@ import React from "react";
 
 function Loader() {
   return (
-    <div className="flex justify-center items-center mt-6">
+    <div className="flex justify-center items-start pt-6 dark:bg-gray-800 dark:h-screen">
       <svg
         width="150"
         height="150"

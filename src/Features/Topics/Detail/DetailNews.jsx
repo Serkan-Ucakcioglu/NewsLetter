@@ -18,7 +18,7 @@ function DetailNews() {
 
   const abstract = topic?.abstract?.map((title) => {
     return (
-      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-black">
+      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-white">
         {title}.
       </span>
     );
@@ -26,12 +26,12 @@ function DetailNews() {
 
   if (isFetching) return <Loader />;
   return (
-    <div className="flex flex-col sm:flex-row p-10 mt-8 bg-gray-100">
-      <div className="flex mb-5 flex-1 flex-col text-left justify-center items-center">
-        <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-black">
+    <div className="flex flex-col justify-center h-full dark:border-t dark:border-white sm:flex-row justify-center items-start h-screen p-10 bg-gray-100 dark:bg-gray-800">
+      <div className="flex  sm:mt-8 sm:flex-1 flex-col text-left items-center">
+        <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           {topic?.byline}
         </h5>
-        <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-black">
+        <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-white">
           {topic?.title}.
         </p>
         {abstract}
