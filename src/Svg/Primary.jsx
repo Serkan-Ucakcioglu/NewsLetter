@@ -3,7 +3,7 @@ import React from "react";
 function Primary() {
   return (
     <svg
-      className="opacity-75 mr-2"
+      className="bg-white color-white  mr-2"
       version="1.1"
       id="Capa_1"
       x="0px"

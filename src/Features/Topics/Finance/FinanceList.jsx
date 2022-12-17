@@ -31,7 +31,7 @@ function FinanceList({ topic }) {
               {topic?.byline}
             </h5>
 
-            <p className="mb-3 text-left text-sm font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 text-left text-sm font-normal text-gray-700 dark:text-white">
               {topic?.title}
             </p>
           </div>
