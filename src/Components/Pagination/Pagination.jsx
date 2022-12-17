@@ -17,7 +17,7 @@ const Pagination = (props) => {
 
     return (
       <li
-        className={`flex items-center border-gray-400 border bg-white text-black cursor-pointer rounded px-3 ml-2
+        className={`flex items-center border-gray-400 border bg-white text-black cursor-pointer rounded px-3 ml-2 dark:border-white
          pagenumber ${pageNumber === currentPage && "active border-white"}`}
         onClick={() => onPageChange(pageNumber)}
       >
@@ -32,7 +32,7 @@ const Pagination = (props) => {
   return (
     <ul className="flex gap-3 justify-center mt-8 mb-10 dark:bg-gray-800">
       <li
-        className="border-gray-400 border bg-white text-black cursor-pointer rounded p-1"
+        className="border-gray-400 border bg-white text-black cursor-pointer rounded p-1 dark:border-white"
         onClick={() => {
           if (currentPage > 1) {
             onPageChange(currentPage - 1);
@@ -43,7 +43,7 @@ const Pagination = (props) => {
       </li>
       {content}
       <li
-        className="border-gray-400 border ml-2 bg-white text-black cursor-pointer rounded p-1"
+        className="border-gray-400 border ml-2 bg-white text-black cursor-pointer rounded p-1 dark:border-white"
         onClick={() => {
           if (currentPage < max) {
             onPageChange(currentPage + 1);
