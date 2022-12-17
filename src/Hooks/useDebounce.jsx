@@ -8,7 +8,7 @@ function useDebounce(value, delay) {
   const debounce = useSelector(selectedDebounce);
 
   useEffect(() => {
-    let timer = setTimeout(() => dispatch(addDebounce(value)), delay || 1000);
+    let timer = setTimeout(() => dispatch(addDebounce(value)), delay || 500);
 
     return () => {
       clearTimeout(timer);
