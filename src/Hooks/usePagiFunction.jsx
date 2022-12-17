@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 
 function usePagiFunction(datas) {
-  let PageSize = 5;
+  let PageSize = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
   const currentSearchData = useMemo(() => {
