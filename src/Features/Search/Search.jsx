@@ -4,9 +4,10 @@ import { useGetSearchsQuery } from "./searchSlice";
 import SearchPopup from "./SearchPopup";
 import useSearch from "../../Hooks/useSearch";
 import { useLocation } from "react-router-dom";
+import Close from "../../Svg/Close";
 
 function Search() {
-  const { value, handleChange } = useSearch();
+  const { value, handleChange, setValue } = useSearch();
   const debounce = useDebounce(value?.length > 2 && value);
   const { data } = useGetSearchsQuery(
     debounce !== undefined && debounce !== "" && debounce
@@ -27,6 +28,14 @@ function Search() {
       <div className="absolute left-0 top-0 ml-2 cursor-pointer">
         <SearchSvg />
       </div>
+      {value?.length > 2 && (
+        <div
+          className="absolute flex items-center h-5 right-0 top-0 ml-2 cursor-pointer"
+          onClick={() => setValue("")}
+        >
+          <Close />
+        </div>
+      )}
     </div>
   );
 }
