@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addDebounce, selectedDebounce } from "../Features/searchSlice";
+import { addDebounce, selectedDebounce } from "../Features/searchSlices";
 
 function useDebounce(value, delay) {
   const dispatch = useDispatch();
