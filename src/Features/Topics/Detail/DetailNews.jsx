@@ -10,7 +10,7 @@ function DetailNews() {
 
   const brands = topic?.secondaryBrands?.map((brand) => {
     return (
-      <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2">
+      <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2 dark:text-white">
         #{brand}
       </span>
     );
@@ -18,7 +18,7 @@ function DetailNews() {
 
   const abstract = topic?.abstract?.map((title) => {
     return (
-      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-gray-400">
+      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-black">
         {title}.
       </span>
     );
@@ -27,11 +27,11 @@ function DetailNews() {
   if (isFetching) return <Loader />;
   return (
     <div className="flex flex-col sm:flex-row p-10 mt-8 bg-gray-100">
-      <div className="flex mb-5 flex-1 flex-col text-justify justify-center items-center">
-        <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+      <div className="flex mb-5 flex-1 flex-col text-left justify-center items-center">
+        <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-black">
           {topic?.byline}
         </h5>
-        <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-gray-400">
+        <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-black">
           {topic?.title}.
         </p>
         {abstract}

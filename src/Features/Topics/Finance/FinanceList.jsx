@@ -7,7 +7,7 @@ function FinanceList({ topic }) {
   return (
     <div className="flex flex-col  items-center mb-2 mt-8">
       <article
-        className={`w-[350px]  bg-white border   border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 ${
+        className={`w-[350px]  bg-white border   border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-white ${
           topic.id ? "h-[520px]" : "h-[420px]"
         }`}
       >

@@ -15,7 +15,7 @@ function Finance() {
 
   return (
     <>
-      <div className="w-full flex justify-center mt-4">
+      <div className="w-full flex justify-center pt-4 dark:bg-gray-800">
         <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
           {currentSearchData &&
             currentSearchData?.map((topic) => (

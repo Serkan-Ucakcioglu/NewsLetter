@@ -12,7 +12,7 @@ function News() {
 
   if (isFetching) return <Loader />;
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col dark:bg-gray-800">
       <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
         {currentSearchData &&
           currentSearchData?.map((topic) => {

@@ -12,7 +12,7 @@ const Pagination = (props) => {
 
   const content = paginationRange?.map((pageNumber) => {
     if (pageNumber === DOTS) {
-      return <li className="pagination-item dots">...</li>;
+      return <li className="pagination-item dots dark:text-white">...</li>;
     }
 
     return (
@@ -30,7 +30,7 @@ const Pagination = (props) => {
   if (currentPage === 0 || (paginationRange && paginationRange.length < 2))
     return null;
   return (
-    <ul className="flex gap-3 justify-center mt-8 mb-10">
+    <ul className="flex gap-3 justify-center mt-8 mb-10 dark:bg-gray-800">
       <li
         className="border-gray-400 border bg-white text-black cursor-pointer rounded p-1"
         onClick={() => {
