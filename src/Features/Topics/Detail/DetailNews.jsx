@@ -11,7 +11,7 @@ function DetailNews() {
   const brands = topic?.secondaryBrands?.map((brand) => {
     return (
       <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2 dark:text-white">
-        #{brand}
+        #{brand},
       </span>
     );
   });
