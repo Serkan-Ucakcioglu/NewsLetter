@@ -13,7 +13,6 @@ function Search() {
     debounce !== undefined && debounce !== "" && debounce
   );
   const location = useLocation();
-
   return (
     <div className="relative w-[700px] h-5 flex items-center">
       <input
