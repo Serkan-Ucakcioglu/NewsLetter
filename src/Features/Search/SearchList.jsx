@@ -1,11 +1,11 @@
 import { useGetSearchsQuery } from "./searchSlice";
-import Loader from "../../Components/Loader";
 import Error from "../../Components/Error";
 import { useSelector } from "react-redux";
 import { selectedDebounce } from "../searchSlices";
 import SearchExperct from "./SearchExperct";
 import usePagiFunction from "../../Hooks/usePagiFunction";
 import Pagination from "../../Components/Pagination/Pagination";
+import Loader from "../../Svg/Loader";
 
 function SearchList() {
   const debounce = useSelector(selectedDebounce);

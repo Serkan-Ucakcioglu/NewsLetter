@@ -1,7 +1,7 @@
 import React from "react";
 import TopicList from "./FinanceList";
 import { useGetTopicQuery } from "../topicsSlice";
-import Loader from "../../../Components/Loader";
+import Loader from "../../../Svg/Loader";
 import usePagiFunction from "../../../Hooks/usePagiFunction";
 import Pagination from "../../../Components/Pagination/Pagination";
 

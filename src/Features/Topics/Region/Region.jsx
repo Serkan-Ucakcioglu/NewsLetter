@@ -1,5 +1,5 @@
 import React from "react";
-import Loader from "../../../Components/Loader";
+import Loader from "../../../Svg/Loader";
 import Pagination from "../../../Components/Pagination/Pagination";
 import usePagiFunction from "../../../Hooks/usePagiFunction";
 import FinanceList from "../Finance/FinanceList";

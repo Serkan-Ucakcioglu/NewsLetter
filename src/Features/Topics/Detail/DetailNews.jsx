@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Loader from "../../../Components/Loader";
+import Loader from "../../../Svg/Loader";
 import { useGetDetailsQuery } from "../topicsSlice";
 import Image from "./Image";
 

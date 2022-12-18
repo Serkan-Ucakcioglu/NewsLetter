@@ -1,4 +1,4 @@
-import Loader from "../../../Components/Loader";
+import Loader from "../../../Svg/Loader";
 import FinanceList from "../Finance/FinanceList";
 import { useGetNewsQuery } from "../topicsSlice";
 import Pagination from "../../../Components/Pagination/Pagination";
