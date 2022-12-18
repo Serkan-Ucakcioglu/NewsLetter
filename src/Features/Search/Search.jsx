@@ -15,7 +15,7 @@ function Search() {
   );
   return (
     <div
-      className="relative w-[700px] h-5 flex items-center"
+      className="relative sm:w-[700px] h-5 flex items-center"
       onFocus={() => setFocus(true)}
       onBlur={() =>
         setTimeout(() => {
