@@ -14,7 +14,6 @@ const Pagination = (props) => {
     if (pageNumber === DOTS) {
       return <li className="pagination-item dots dark:text-white">...</li>;
     }
-
     return (
       <li
         className={`flex items-center border-gray-400 border bg-white text-black cursor-pointer rounded px-3 ml-2 dark:border-white
