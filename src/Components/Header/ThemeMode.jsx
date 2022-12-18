@@ -19,8 +19,7 @@ function ThemeMode() {
         theme === "light" ? "" : " justify-end"
       }`}
     >
-      <div
-        onClick={handleClick}
+      <button
         className={`w-4 h-4 rounded-full border-gray-300 border absolute transform duration-200 ease-out bg-black left-0.5 ${
           theme === "light" ? "translate-x-6" : "translate-x-0"
         }`}

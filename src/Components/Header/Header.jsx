@@ -1,6 +1,6 @@
 import Logo from "./Logo";
-import Search from "../../Features/Search/Search";
 import ThemeMode from "./ThemeMode";
+import Search from "../../Features/Search/Search";
 
 function Header() {
   return (
