@@ -23,7 +23,7 @@ function Search() {
         className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
       />
       {debounce && location?.pathname !== "/search-list" && (
-        <SearchPopup data={data} />
+        <SearchPopup data={data} key={Date.now()} />
       )}
       <div className="absolute left-0 top-0 ml-2 cursor-pointer">
         <SearchSvg />

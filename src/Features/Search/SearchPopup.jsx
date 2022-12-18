@@ -8,6 +8,7 @@ function SearchPopup({ data }) {
         {data?.news?.slice(0, 3)?.map((obj) => {
           return (
             <Link
+              key={obj?.id}
               to={`/detail/${obj?.id}`}
               className="mt-2 pl-2 h-8 flex items-center hover:bg-gray-200 hover:text-gray-700 rounded"
             >
