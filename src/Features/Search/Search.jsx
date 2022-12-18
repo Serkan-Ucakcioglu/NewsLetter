@@ -13,6 +13,8 @@ function Search() {
   const { data } = useGetSearchsQuery(
     debounce !== undefined && debounce !== "" && debounce
   );
+  console.log(data);
+
   return (
     <div
       className="relative sm:w-[700px] h-5 flex items-center"
@@ -27,12 +29,14 @@ function Search() {
         type="text"
         {...handleChange}
         placeholder="Search News"
-        className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
+        className={`border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white ${
+          !data?.length
+            ? "border-red-500 border-2 dark:border-red-500 dark:border-2"
+            : ""
+        }]`}
       />
-      {debounce?.length > 2 && focus ? (
+      {debounce?.length > 2 && focus && !!data?.length && (
         <SearchPopup data={data} key={Date.now()} />
-      ) : (
-        ""
       )}
       <div className="absolute left-0 top-0 ml-2 cursor-pointer">
         <SearchSvg />
