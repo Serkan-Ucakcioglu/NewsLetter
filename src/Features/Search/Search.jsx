@@ -13,8 +13,6 @@ function Search() {
   const { data } = useGetSearchsQuery(
     debounce !== undefined && debounce !== "" && debounce
   );
-  console.log(data);
-
   return (
     <div
       className="relative sm:w-[700px] h-5 flex items-center"
