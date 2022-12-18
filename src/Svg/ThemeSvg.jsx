@@ -2,14 +2,13 @@ import React from "react";
 
 function ThemeSvg({ theme, handleClick }) {
   return (
-    <>
+    <div onClick={handleClick}>
       {theme === "light" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-3 w-3 text-white"
           viewBox="0 0 20 20"
           fill="#fff"
-          onClick={handleClick}
         >
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
         </svg>
@@ -19,7 +18,6 @@ function ThemeSvg({ theme, handleClick }) {
           className="h-3 w-3 text-white"
           viewBox="0 0 20 20"
           fill="#000"
-          onClick={handleClick}
         >
           <path
             fillRule="evenodd"
@@ -28,7 +26,7 @@ function ThemeSvg({ theme, handleClick }) {
           />
         </svg>
       )}
-    </>
+    </div>
   );
 }
 
