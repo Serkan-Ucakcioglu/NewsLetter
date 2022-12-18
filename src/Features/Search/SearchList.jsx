@@ -10,7 +10,7 @@ import Loader from "../../Svg/Loader";
 function SearchList() {
   const debounce = useSelector(selectedDebounce);
   const { data, isError, isFetching } = useGetSearchsQuery(
-    debounce !== undefined && debounce !== "" && debounce
+    debounce && debounce
   );
   const { currentSearchData, currentPage, setCurrentPage } = usePagiFunction(
     data && data
