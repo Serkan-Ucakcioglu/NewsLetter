@@ -5,7 +5,7 @@ function SearchPopup({ data }) {
   return (
     <div className="absolute bottom-0 top-10 p-3 h-[170px] border-white bg-gray-50 dark:bg-white border w-full rounded">
       <div className="flex flex-col px-3">
-        {data?.news?.slice(0, 3)?.map((obj) => {
+        {data?.slice(0, 3)?.map((obj) => {
           return (
             <Link
               key={obj?.id}
@@ -17,7 +17,7 @@ function SearchPopup({ data }) {
           );
         })}
       </div>
-      {data?.news?.length > 2 && (
+      {data?.length > 2 && (
         <Link
           to="search-list"
           className="absolute bottom-0 text-m font-bold w-full p-2 text-center"
