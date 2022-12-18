@@ -15,7 +15,7 @@ function ThemeMode() {
       role="checkbox"
       aria-checked={theme === "light" ? "dark" : "light"}
       onClick={handleClick}
-      className={`cursor-pointer w-[165px] relative sm:w-12 h-5 ml-4 bg-black dark:bg-white rounded-full relative px-1.5 flex items-center${
+      className={`cursor-pointer  w-[185px] m:w-[140px] relative sm:w-12 h-5 ml-4 bg-black dark:bg-white rounded-full relative px-1 flex items-center${
         theme === "light" ? "" : " justify-end"
       }`}
     >

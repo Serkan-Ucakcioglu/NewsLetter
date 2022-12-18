@@ -1,28 +1,38 @@
+import { useState } from "react";
 import SearchSvg from "../../Svg/SearchSvg";
 import useDebounce from "../../Hooks/useDebounce";
 import { useGetSearchsQuery } from "./searchSlice";
 import SearchPopup from "./SearchPopup";
 import useSearch from "../../Hooks/useSearch";
-import { useLocation } from "react-router-dom";
 import Close from "../../Svg/Close";
 
 function Search() {
+  const [focus, setFocus] = useState(false);
   const { value, handleChange, setValue } = useSearch();
   const debounce = useDebounce(value?.length > 2 && value);
   const { data } = useGetSearchsQuery(
     debounce !== undefined && debounce !== "" && debounce
   );
-  const location = useLocation();
   return (
-    <div className="relative w-[700px] h-5 flex items-center">
+    <div
+      className="relative w-[700px] h-5 flex items-center"
+      onFocus={() => setFocus(true)}
+      onBlur={() =>
+        setTimeout(() => {
+          setFocus(false);
+        }, 200)
+      }
+    >
       <input
         type="text"
         {...handleChange}
         placeholder="Search News"
         className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
       />
-      {debounce?.length > 2 && location?.pathname !== "/search-list" && (
+      {debounce?.length > 2 && focus ? (
         <SearchPopup data={data} key={Date.now()} />
+      ) : (
+        ""
       )}
       <div className="absolute left-0 top-0 ml-2 cursor-pointer">
         <SearchSvg />
