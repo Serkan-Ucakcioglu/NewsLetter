@@ -30,7 +30,7 @@ function Search() {
         {...handleChange}
         placeholder="Search News"
         className={`border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white ${
-          !data?.length
+          focus && !data?.length
             ? "border-red-500 border-2 dark:border-red-500 dark:border-2"
             : ""
         }]`}
