@@ -26,11 +26,7 @@ function Search() {
         type="text"
         {...handleChange}
         placeholder="Search News"
-        className={`border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white ${
-          focus && debounce?.length > 2 && !data?.length
-            ? "border-red-500 border-2 dark:border-red-500 dark:border-2"
-            : ""
-        }]`}
+        className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
       />
       {debounce?.length > 2 && focus && !!data?.length && (
         <SearchPopup data={data} key={Date.now()} />
