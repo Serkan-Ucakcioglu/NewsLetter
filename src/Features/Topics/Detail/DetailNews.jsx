@@ -4,18 +4,11 @@ import Loader from "../../../Svg/Loader";
 import { useGetDetailsQuery } from "../topicsSlice";
 import Abstract from "./Abstract";
 import Image from "./Image";
+import Brands from "../Finance/Brands";
 
 function DetailNews() {
   const { id } = useParams();
   const { data: topic, isFetching } = useGetDetailsQuery(id);
-
-  const brands = topic?.secondaryBrands?.map((brand) => {
-    return (
-      <span className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-white  mr-2 mt-2 dark:text-white">
-        #{brand},
-      </span>
-    );
-  });
 
   if (isFetching) return <Loader />;
   return (
@@ -30,7 +23,11 @@ function DetailNews() {
         {topic?.abstract?.map((title) => (
           <Abstract title={title} />
         ))}
-        <div className="flex flex-wrap">{brands}</div>
+        <div className="flex flex-wrap">
+          {topic?.secondaryBrands?.map((topic) => {
+            <Brands topic={topic} />;
+          })}
+        </div>
       </div>
       <Image topic={topic} />
     </div>
