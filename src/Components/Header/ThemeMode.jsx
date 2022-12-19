@@ -18,6 +18,7 @@ function ThemeMode() {
       }`}
     >
       <button
+        id="rounded-btn"
         className={`btn w-4 h-4 rounded-full border-gray-300 border absolute transform duration-200 ease-out left-0.5 ${
           theme === "light"
             ? "translate-x-7 bg-white"
