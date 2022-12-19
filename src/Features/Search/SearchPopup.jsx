@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function SearchPopup({ data }) {
   return (
     <div className="h-[200px] overflow-auto absolute bottom-0 top-10 p-3 sm:h-[170px] border-white bg-gray-50 dark:bg-white border w-full rounded">
-      <div className="mb-2 sm:flex  flex-col px-3 overflow-auto">
+      <div className="mb-2 sm:flex  flex-col justify-center px-3 overflow-auto">
         {data?.slice(0, 3)?.map((obj) => {
           return (
             <Link
