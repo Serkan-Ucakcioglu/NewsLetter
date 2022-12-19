@@ -8,6 +8,7 @@ import Image from "./Image";
 function DetailNews() {
   const { id } = useParams();
   const { data: topic, isFetching } = useGetDetailsQuery(id);
+
   const abstract = topic?.abstract?.map((title) => <Abstract title={title} />);
   const brands = topic?.secondaryBrands?.map((brand) => {
     return (
