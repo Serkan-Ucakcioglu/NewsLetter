@@ -18,7 +18,7 @@ function ThemeMode() {
       }`}
     >
       <button
-        className={`w-4 h-4 rounded-full border-gray-300 border absolute transform duration-200 ease-out left-0.5 ${
+        className={`btn w-4 h-4 rounded-full border-gray-300 border absolute transform duration-200 ease-out left-0.5 ${
           theme === "light"
             ? "translate-x-7 bg-white"
             : "translate-x-0 bg-black"
