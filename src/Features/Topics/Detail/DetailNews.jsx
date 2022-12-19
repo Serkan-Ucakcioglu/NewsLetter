@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../../../Svg/Loader";
 import { useGetDetailsQuery } from "../topicsSlice";
+import Abstract from "./Abstract";
 import Image from "./Image";
 
 function DetailNews() {
@@ -16,14 +17,6 @@ function DetailNews() {
     );
   });
 
-  const abstract = topic?.abstract?.map((title) => {
-    return (
-      <span className="mb-3 mt-2 text-m font-bold text-gray-700 dark:text-white">
-        {title}.
-      </span>
-    );
-  });
-
   if (isFetching) return <Loader />;
   return (
     <div className="flex flex-col text-center justify-start m:flex-col h-full dark:border-t dark:border-white sm:flex-row sm:justify-center items-start h-screen p-10 bg-gray-100 dark:bg-gray-800">
@@ -34,7 +27,9 @@ function DetailNews() {
         <p className="mb-3 mt-4 text-m font-bold text-gray-700 dark:text-white">
           {topic?.title}.
         </p>
-        {abstract}
+        {topic?.abstract?.map((title) => (
+          <Abstract title={title} />
+        ))}
         <div className="flex flex-wrap">{brands}</div>
       </div>
       <Image topic={topic} />
