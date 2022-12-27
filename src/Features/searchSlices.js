@@ -22,5 +22,4 @@ const searchSlices = createSlice({
 export const selectedDebounce = (state) => state.searchSlices.debounce;
 export const selectedTheme = (state) => state.searchSlices.theme;
 export const { addDebounce, themeChange } = searchSlices.actions;
-
 export default searchSlices.reducer;
