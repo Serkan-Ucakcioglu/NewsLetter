@@ -14,5 +14,4 @@ export const searchApi = apiSlice.injectEndpoints({
 });
 
 export const selectUsersResult = apiSlice.endpoints.getSearchs.select();
-
 export const { useGetSearchsQuery } = searchApi;
