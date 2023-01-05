@@ -8,7 +8,7 @@ function Error() {
         Sorry, an unexpected error has occurred!.
       </span>
       <Link to="/" className="mt-4 underline text-2xl font-extrabold">
-        Back to Home
+        Back to Home Page
       </Link>
     </div>
   );
