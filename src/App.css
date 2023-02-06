@@ -2,4 +2,5 @@
   background: #3e64ff !important;
   color: #fff !important;
   border: 1px solid transparent !important;
+  transition: all 300ms;
 }
