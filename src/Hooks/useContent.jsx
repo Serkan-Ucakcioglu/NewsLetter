@@ -12,7 +12,9 @@ function useContent(data) {
       <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
         {currentSearchData &&
           currentSearchData?.map((topic) => {
-            return <FinanceList topic={topic} key={topic?.internalID} />;
+            return (
+              <FinanceList topic={topic} key={topic?.internalID || topic?.id} />
+            );
           })}
       </div>
       <Pagination
