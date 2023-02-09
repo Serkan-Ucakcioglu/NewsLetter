@@ -5,7 +5,7 @@ import useContent from "../../../Hooks/useContent";
 
 function Region() {
   const { data, isFetching } = useGetRegionQuery();
-  const content = useContent(data);
+  const content = useContent(data && data);
 
   if (isFetching) return <Loader />;
   return <>{content}</>;
