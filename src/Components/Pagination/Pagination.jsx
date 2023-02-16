@@ -1,5 +1,6 @@
 import usePagiFunction from "../../Hooks/usePagiFunction";
 import { usePagination, DOTS } from "../../Hooks/usePagination";
+
 const Pagination = (props) => {
   const { onPageChange, totalCount, siblingCount = 1, currentPage } = props;
   const { PageSize } = usePagiFunction();
