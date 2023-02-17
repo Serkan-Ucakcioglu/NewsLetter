@@ -1,5 +1,3 @@
-### About
-Rapid api 
 
 ### Web Page
 <img width="1795" alt="image" src="https://user-images.githubusercontent.com/98692987/208478035-15508c42-2726-4b04-84c0-e017b7416ff0.png">
