@@ -7,6 +7,7 @@ import ThemeSvg from "../../Svg/ThemeSvg";
 function ThemeMode() {
   const theme = useSelector(selectedTheme);
   const dispatch = useDispatch();
+
   const handleClick = () => {
     dispatch(themeChange());
   };
