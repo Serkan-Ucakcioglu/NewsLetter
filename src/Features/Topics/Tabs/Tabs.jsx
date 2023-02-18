@@ -9,6 +9,7 @@ function Tabs() {
   const arr = [{ name: "Finance" }, { name: "News" }, { name: "General" }];
   const [active, setActive] = useState("Finance");
 
+  // tab list
   const tabArr = {
     Finance: <Finance />,
     News: <News />,
