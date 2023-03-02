@@ -1,6 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import Region from "../Region/Region";
 import TabList from "./TabList";
+import News from "../News/News";
+import Finance from "../Finance/Finance";
 
 function Tabs() {
   const arr = [{ name: "Finance" }, { name: "News" }, { name: "General" }];
@@ -8,9 +11,9 @@ function Tabs() {
 
   // tab list
   const tabArr = {
-    Finance: React.lazy(() => import("../Finance/Finance")),
-    News: React.lazy(() => import("../News/News")),
-    General: React.lazy(() => import("../Region/Region")),
+    Finance: <Finance />,
+    News: <News />,
+    General: <Region />,
   };
   return (
     <>
