@@ -26,7 +26,7 @@ function Search() {
         type="text"
         {...handleChange}
         placeholder="Search News"
-        className="border-gray-500 relative border-2 h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
+        className="border-gray-400 focus:border-black relative border h-11 rounded w-full pl-10 outline-none shadow dark:border-white"
       />
       {debounce?.length > 2 && focus && !!data?.length && (
         <SearchPopup data={data} key={Date.now()} />
