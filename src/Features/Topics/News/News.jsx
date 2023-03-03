@@ -7,7 +7,7 @@ function News() {
   const content = useContent(data && data);
 
   if (isFetching) return <Loader />;
-  return <>{content}</>;
+  return content;
 }
 
 export default News;
