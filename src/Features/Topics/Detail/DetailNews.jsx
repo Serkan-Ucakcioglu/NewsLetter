@@ -20,8 +20,8 @@ function DetailNews() {
 
   if (isFetching) return <Loader />;
   return (
-    <div className="flex flex-col items-start text-center justify-center px-6  m:flex-col h-full dark:border-t dark:border-white sm:flex-row sm:justify-center  h-screen p-10 bg-gray-100 dark:bg-gray-800">
-      <div className="flex text-center  sm:mt-8 sm:flex-1 flex-col text-left items-center">
+    <div className="flex flex-col items-center text-center justify-start px-6  m:flex-col h-full dark:border-t dark:border-white  sm:justify-start  h-screen bg-gray-100 dark:bg-gray-800">
+      <div className="flex text-center sm:mt-8 sm:flex mb-4 flex-col text-left items-center">
         <h5 className="mb-2 text-xl font-bold text-gray-900 dark:text-white">
           {topic?.byline}
         </h5>
