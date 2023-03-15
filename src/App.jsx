@@ -7,7 +7,7 @@ import { selectedTheme } from "./Features/searchSlices";
 function App() {
   const theme = useSelector(selectedTheme);
   return (
-    <div className={`App ${theme === "dark" && "dark"}`}>
+    <div className={`App ${theme === "dark" && "dark h-full"}`}>
       <Header />
       <Outlet />
     </div>
