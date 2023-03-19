@@ -30,7 +30,7 @@ const Pagination = (props) => {
   if (currentPage === 0 || (paginationRange && paginationRange.length < 2))
     return null;
   return (
-    <ul className="flex px-4 sm:flex gap-3 justify-center mt-8 mb-10 dark:bg-gray-800">
+    <ul className="flex px-4 py-4 sm:flex gap-3 justify-center mt-8 mb-10 dark:bg-gray-800">
       <li
         className="border-gray-400 border bg-white text-black cursor-pointer rounded p-1 dark:border-white"
         onClick={() => {
