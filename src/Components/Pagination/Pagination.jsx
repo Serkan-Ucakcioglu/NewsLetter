@@ -29,6 +29,7 @@ const Pagination = (props) => {
   });
 
   const max = Math.ceil(totalCount / PageSize); // max page
+
   if (currentPage === 0 || (paginationRange && paginationRange.length < 2))
     return null;
   return (
