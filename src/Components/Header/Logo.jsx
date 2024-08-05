@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Logo() {
   return (
-    <Link to="/" className="mr-10">
+    <Link to="/" className="mr-10 p2">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8mB1pyuU6HAxkxPSXsdiuSzknXuNPtNIG4Q&usqp=CAU"
         alt="logo"
