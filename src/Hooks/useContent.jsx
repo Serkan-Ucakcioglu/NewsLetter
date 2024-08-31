@@ -11,8 +11,8 @@ function useContent(data) {
   //Instead of mapping the component one by one, returning the component,
   // by dipping it once and preventing the duplication of the code.
   const content = (
-    <div className="flex flex-col h-screen dark:bg-gray-800 ">
-      <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3">
+    <div className="flex flex-col dark:bg-gray-800 ">
+      <div className="flex flex-wrap justify-center max-w-6xl mx-auto gap-3 dark:bg-gray-800">
         {currentSearchData &&
           currentSearchData?.map((topic) => {
             return (
